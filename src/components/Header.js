@@ -4,11 +4,11 @@ import { Image, Text,View } from 'react-native'
 
 const Header = () => {
     return(
-        <View style={{ flexDirection: 'row',justifyContent:'space-between' }}>
+        <View style={{ flexDirection: 'row',justifyContent:'space-between', margin: 20 }}>
                 <Image style={{ height: 20, width: 20 }}
                     resizeMode='contain'
                     source={require('../anhchen/icon.png')} />
-                <Text style={{ fontSize: 17, fontWeight: '500', color: 'black' }}>Message</Text>
+                <Text style={{ fontSize: 17, fontWeight: '500', color: 'black' }}>Messages</Text>
                 <Image
                     source={require('../anhchen/cong.jpg')}
                     resizeMode='contain'

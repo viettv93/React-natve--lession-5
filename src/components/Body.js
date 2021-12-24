@@ -18,7 +18,7 @@ const Body = () => {
                 <Image
                     resizeMode="contain"
                     source={item.image} />
-                <Text style={{ fontSize: 17, color: 'black' }}>{item.name}</Text>
+                <Text style={{ fontSize: 13, color: 'rgba(0, 0, 0, 0.55)' }}>{item.name}</Text>
             </View>
         )
     }
