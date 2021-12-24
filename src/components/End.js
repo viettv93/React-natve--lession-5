@@ -1,5 +1,5 @@
 import React from "react"
-import { View, Text, FlatList,Image} from "react-native"
+import { View, Text, FlatList, Image } from "react-native"
 const array1 = [{ image: require('../anhchen/anh5/img_ins.png'), name: 'Black Marvin', status: '😜 😜 😜 😜', lastTimeOnline: "20:30" },
 { image: require('../anhchen/anh6/img_ins.png'), name: 'Nguyen Shane', status: "There 's somebody out there ...", lastTimeOnline: "20:30" },
 { image: require('../anhchen/anh7/img_ins.png'), name: 'Cooper Kristin', status: "Life doesn't have to be perfect.", lastTimeOnline: "20:30" },
@@ -15,21 +15,24 @@ const array1 = [{ image: require('../anhchen/anh5/img_ins.png'), name: 'Black Ma
 const End = () => {
     const renderItem1 = ({ item, index }) => {
         return (
-            <View style={{ flexDirection: 'row', alignItems: 'center', marginTop: 30, marginLeft: 20 }}>
+            <View style={{ flexDirection: 'row', alignItems: 'center', marginTop: 30 }}>
                 <Image
                     resizeMode='contain'
                     source={item.image} />
-                <View style={{ flex: 1 }}>
+                <View style={{ flex: 1, justifyContent: 'center', marginLeft: 3 }}>
                     <Text style={{ fontSize: 16, color: 'black', fontWeight: '500', margin: 5 }}>{item.name}</Text>
-                    <Text style={{ fontSize: 13, color: 'rgba(0, 0, 0, 0.55)' , marginLeft: 5}}>{item.status}</Text>
+                    <Text style={{ fontSize: 13, color: 'rgba(0, 0, 0, 0.55)', marginLeft: 5 }}>{item.status}</Text>
                 </View>
                 <Text>{item.lastTimeOnline}</Text>
             </View>
         )
     }
     return (
-        <View>
-            <FlatList data={array1}
+        <View style={{padding: 5}}>
+            <FlatList
+                showsVerticalScrollIndicator={false}
+                showsHorizontalScrollIndicator={false}
+                data={array1}
                 renderItem={renderItem1}>
             </FlatList>
         </View>
