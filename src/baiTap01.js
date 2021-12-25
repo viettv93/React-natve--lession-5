@@ -9,10 +9,10 @@ import End from "./components/End"
 
 const baiTap01 = () => {
     return (
-        <View style={{ flex: 1, padding: 7}}>
+        <View style={{ flex: 1, padding: 7, backgroundColor:'white'}}>
             <Header />
             <Body />
-            <End />
+            <End/>
         </View>
     )
 }
